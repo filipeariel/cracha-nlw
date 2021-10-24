@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pt_BR">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="titleName">Mayk Brito - DoWhile 2021</title>
 
     <link rel="stylesheet" href="style.css" />
@@ -13,12 +15,18 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <div id="strip"></div>
+  <div id="blackStrip"></div>
+  <body id="degrade">
     <main>
       <div class="container">
         <div class="avatar">
           <span>
-            <img src="images/build.svg" alt="Selo Rocketseat" />
+            <img
+              src="images/build.svg"
+              alt="Selo Rocketseat"
+              id="rotateAnimation"
+            />
           </span>
           <img src="images/avatar.svg" alt="Foto pessoal" id="userImage" />
         </div>
@@ -31,22 +39,22 @@
           An instructor focused on helping pople start programming for web
         </p>
         <ul id="socialLinks">
-          <li class="youtube">
+          <li id="youtube" class="upMove">
             <a href="https://youtube.com" target="_blank">
               <img src="images/youtube.svg" alt="Ícone YouTube"
             /></a>
           </li>
-          <li class="facebook">
+          <li id="facebook" class="upMove">
             <a href="https://facebook.com" target="_blank">
               <img src="images/facebook.svg" alt="Ícone Facebook"
             /></a>
           </li>
-          <li class="instagram">
+          <li id="instagram" class="upMove">
             <a href="https://instagram.com" target="_blank">
               <img src="images/instagram.svg" alt="Ícone Instagram"
             /></a>
           </li>
-          <li class="twitter">
+          <li id="twitter" class="upMove">
             <a href="https://twitter.com" target="_blank">
               <img src="images/twitter.svg" alt="Ícone Twitter"
             /></a>

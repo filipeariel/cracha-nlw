@@ -5,6 +5,7 @@
 html,
 body {
   --black: hsl(240, 6%, 13%);
+  --blackBackground: hsl(240, 5%, 7%);
   --grey: hsl(240, 9%, 89%);
 
   height: 100%;
@@ -18,9 +19,10 @@ body {
 }
 
 main {
-  background: url(images/background.svg);
-  width: 375px;
-  height: 812px;
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vw;
 }
 
 .container {
@@ -53,6 +55,19 @@ main {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
+#rotateAnimation {
+  animation: rotation 15s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 h1 {
   font-size: 1.5rem;
 
@@ -71,6 +86,17 @@ a {
   align-items: center;
 }
 
+#userLink {
+  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+}
+
+#userLink:hover {
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
 p {
   margin-top: 2rem;
 }
@@ -85,4 +111,56 @@ ul {
   gap: 0.5rem;
 
   justify-content: center;
+}
+
+li img {
+  border-radius: 0.75rem;
+}
+
+.upMove {
+  transition-duration: 0.3s;
+}
+
+.upMove:hover {
+  transform: translateY(-0.5rem);
+}
+
+/*=========== MEDIA QUERIES ===========*/
+/* medium device: 720 > */
+@media (min-width: 720px) {
+  main {
+    background: url(images/backgroundDesk.svg);
+    position: absolute;
+    width: 22.375rem;
+    height: 33.75rem;
+
+    background-position: center;
+  }
+
+  #degrade {
+    background: url(images/degrade.svg);
+    background-color: black;
+  }
+
+  #strip {
+    background: url(images/strip.svg);
+    width: 4rem;
+    height: 9.875rem;
+    z-index: 3;
+
+    position: absolute;
+
+    margin: -41.3rem auto 0 auto;
+  }
+
+  #blackStrip {
+    background: url(images/blackStrip.svg);
+    width: 5rem;
+    height: 0.5rem;
+    z-index: 2;
+
+    position: absolute;
+
+    margin: -31.3rem auto 0 auto;
+  }
 }
